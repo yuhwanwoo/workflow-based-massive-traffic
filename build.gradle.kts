@@ -29,8 +29,8 @@ dependencies {
 
     implementation("org.springframework.kafka:spring-kafka")
 
-    implementation("io.temporal:temporal-sdk")
-    implementation("io.temporal:temporal-spring-boot-starter-alpha")
+    implementation("io.temporal:temporal-sdk:1.20.1")
+    implementation("io.temporal:temporal-spring-boot-starter-alpha:1.20.1")
 
     implementation("com.fasterxml.jackson.core:jackson-databind")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
