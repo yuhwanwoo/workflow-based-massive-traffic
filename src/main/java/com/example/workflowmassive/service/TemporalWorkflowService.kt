@@ -11,9 +11,10 @@ import io.temporal.worker.Worker
 import io.temporal.worker.WorkerFactory
 import jakarta.annotation.PostConstruct
 import org.slf4j.LoggerFactory
+import org.springframework.stereotype.Component
 import java.time.Duration
-import java.util.logging.Logger
 
+@Component
 class TemporalWorkflowService(
     private val workflowClient: WorkflowClient,
     private val workerFactory: WorkerFactory,

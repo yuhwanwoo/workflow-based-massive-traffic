@@ -42,12 +42,12 @@ class TemporalConfig {
     }
 
     @Bean
-    fun workFactory(workflowClient: WorkflowClient): WorkerFactory {
+    fun workerFactory(workflowClient: WorkflowClient): WorkerFactory {
         return WorkerFactory.newInstance(workflowClient)
     }
 
     @Bean
-    fun financialWorker(workFactory: WorkerFactory): Worker {
-        return workFactory.newWorker(FINANCE_TASK_QUEUE)
+    fun financialWorker(workerFactory: WorkerFactory): Worker {
+        return workerFactory.newWorker(FINANCE_TASK_QUEUE)
     }
 }

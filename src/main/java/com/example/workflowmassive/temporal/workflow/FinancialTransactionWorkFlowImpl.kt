@@ -27,6 +27,11 @@ class FinancialTransactionWorkFlowImpl: FinancialTransactionWorkFlow {
             logger.info("processing transaction ${request.transactionId}")
             activities.executeTransaction(request)
             logger.info("finished transaction ${request.transactionId}")
+            return TransactionResult(
+                transactionId = request.transactionId,
+                status = TransactionStatus.COMPLETED,
+                message = "거래 성공"
+            )
         } catch (ex: Exception) {
             logger.error(ex.message, ex)
             return TransactionResult(
