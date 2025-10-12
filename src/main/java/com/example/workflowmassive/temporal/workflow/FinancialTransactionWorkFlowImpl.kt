@@ -5,10 +5,8 @@ import io.temporal.activity.ActivityOptions
 import io.temporal.common.RetryOptions
 import io.temporal.workflow.Workflow
 import org.slf4j.LoggerFactory
-import org.springframework.stereotype.Component
 import java.time.Duration
 
-@Component
 class FinancialTransactionWorkFlowImpl: FinancialTransactionWorkFlow {
     private val logger = LoggerFactory.getLogger(FinancialTransactionWorkFlowImpl::class.java)
     private val opts = ActivityOptions.newBuilder()
